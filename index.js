@@ -4,6 +4,7 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import UserRouter from './routes/userRoutes.js'
+import CourseRouter from './routes/courseRoutes.js'
 
 
 //*MongoDb-Connect
@@ -23,6 +24,7 @@ app.use(express.json())
 
 //*router middleware
 app.use('/api/users', UserRouter)
+app.use('/api/course', CourseRouter)
 
 app.get("/",(req,res)=>{
     res.json({status:"success"})

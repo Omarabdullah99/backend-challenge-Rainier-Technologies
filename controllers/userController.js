@@ -52,3 +52,9 @@ export const register = async (req, res, next) => {
         res.status(500).send({ message: `Error in Login CTRL ${error.message}` });
       }
   };
+
+  export const privateRoute =(req, res) => {
+    return  res.status(200).send({ message: 'ok this is admin route' });
+
+
+  }
